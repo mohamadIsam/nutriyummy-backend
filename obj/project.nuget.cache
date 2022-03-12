@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "MAP4t4M08sq8VYpsTTiI+gIsL/lN6LpWEkJKMay05ux6RGNYLde3jF2hYfCb4mfpeMY879grUZuA16rebQ1uLg==",
+  "success": true,
+  "projectFilePath": "/media/mohamad/A094EB8994EB5FF0/infograph task/nutriyummy-backend/nutriyummy-backend.csproj",
+  "expectedPackageFiles": [
+    "/home/mohamad/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/mohamad/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/mohamad/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/home/mohamad/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/home/mohamad/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/home/mohamad/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
