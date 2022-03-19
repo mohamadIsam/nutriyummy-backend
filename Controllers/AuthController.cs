@@ -1,26 +1,27 @@
+namespace nutriyummy.Controllers;
+
 using Microsoft.AspNetCore.Mvc;
 
 using nutriyummy.Model;
 using nutriyummy.Services;
 
-namespace nutriyummy.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class AuthController {
 
-    IMongoDbService mongoDbService;
-    public AuthController(IMongoDbService mongoDbService) {
-        this.mongoDbService = mongoDbService;
+    IUserService userService;
+    public AuthController(IUserService userService) {
+        this.userService = userService;
     }
 
     [HttpPost]
-    public void Regiser([FromBody] RegiserModel user) {
-        mongoDbService.Register(user);
+    public void Regiser([FromBody] UsreModel user) {
+        userService.register(user);
     }
 
     [HttpGet]
     public List<UsreModel> GetAllUsers() {
-        return mongoDbService.GetAllUsers();
+        return userService.getAllUsers();
     }
  }
