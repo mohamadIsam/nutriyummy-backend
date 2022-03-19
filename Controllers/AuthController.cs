@@ -16,12 +16,14 @@ public class AuthController {
     }
 
     [HttpPost]
-    public void Regiser([FromBody] UsreModel user) {
+    [Route("register")]
+    public void regiser([FromBody] UsreModel user) {
         userService.register(user);
     }
 
     [HttpGet]
-    public List<UsreModel> GetAllUsers() {
+    [Route("getAllUsers")]
+    public List<UsreModel> getAllUsers() {
         return userService.getAllUsers();
     }
  }
