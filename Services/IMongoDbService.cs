@@ -1,9 +1,10 @@
-using nutriyummy.Model;
-
 namespace nutriyummy.Services;
 
-public interface IMongoDbService {
+using nutriyummy.Model;
+using MongoDB.Driver;
 
-    public void Register(RegiserModel user);
-    public List<UsreModel> GetAllUsers();
+public interface IMongoDbService
+{
+    void save<T>(T document, string collectionName);
+    List<T> getAll<T>(string collectionName);
 }

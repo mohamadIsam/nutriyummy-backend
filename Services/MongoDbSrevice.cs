@@ -1,9 +1,7 @@
-using MongoDB.Driver;
-
-using nutriyummy.Model;
-
 namespace nutriyummy.Services;
 
+using MongoDB.Driver;
+using nutriyummy.Model;
 public class MongoDbService : IMongoDbService
 {
     MongoClient client;
@@ -15,13 +13,12 @@ public class MongoDbService : IMongoDbService
         );
         database = client.GetDatabase("nutriyummy");
     }
-
-    public void Register(RegiserModel user)
-    {
+/*  */
+    public void save<T>(T document, string collectionName) {
         try
         {
-            var collection = database.GetCollection<RegiserModel>("UserModel");
-            collection.InsertOne(user);
+            var collection = database.GetCollection<T>(collectionName);
+            collection.InsertOne(document);
         }
         catch (Exception e)
         {
@@ -29,15 +26,11 @@ public class MongoDbService : IMongoDbService
         }
     }
 
-    public List<UsreModel> GetAllUsers()
-    {
+    public List<T> getAll<T>(string collectionName) {
         try
         {
-            var collection = database.GetCollection<UsreModel>("UserModel");
-            Console.WriteLine("get Collection");
-            var result =  collection.Find(_ => true).ToList();
-            Console.WriteLine("get Result");
-            return result;
+            var collection = database.GetCollection<T>(collectionName);
+            return collection.Find(_ => true).ToList();
         }
         catch (Exception e)
         {
@@ -45,4 +38,5 @@ public class MongoDbService : IMongoDbService
         }
         return null;
     }
+
 }
